@@ -1,0 +1,19 @@
+{
+  "name": "@smardex/solidity-libs",
+  "version": "0.1.0",
+  "description": "General public solidity libraries",
+  "repository": "git@github.com:SmarDex-Ecosystem/solidity-libs.git",
+  "author": "RA2 Tech",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist && rm -rf node_modules && rm -rf .coverage && rm -rf out && rm -rf dependencies && forge clean && npm run installDeps",
+    "format": "forge fmt",
+    "installDeps": "npm i && forge soldeer install",
+    "lint:test": "solhint -c test/.solhint.json 'test/**/*.sol'",
+    "lint": "solhint 'src/**/*.sol'",
+    "test": "forge test -vvv"
+  },
+  "devDependencies": {
+    "solhint": "^5.0.2"
+  }
+}

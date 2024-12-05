@@ -34,6 +34,7 @@
           ];
 
           shellHook = ''
+            npm i
             forge soldeer install
           '';
 
