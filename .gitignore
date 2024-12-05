@@ -1,0 +1,22 @@
+# Builds
+out/
+target/
+
+# Private files
+.env
+
+# Cache
+cache/
+
+# Dependencies
+dependencies/
+
+# direnv
+.direnv
+
+# coverage
+.coverage/
+lcov.info
+
+# docs
+docs/
