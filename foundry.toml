@@ -1,0 +1,27 @@
+[profile.default]
+solc_version = "0.8.27"
+libs = ["dependencies"]
+ffi = true
+fuzz = { runs = 100_000 }
+remappings = ["forge-std-1/=dependencies/forge-std-1.9.4/src/"]
+
+[profile.default.fmt]
+line_length = 120
+bracket_spacing = true
+wrap_comments = true
+number_underscore = "thousands"
+sort_imports = true
+
+[soldeer]
+remappings_generate = true
+remappings_version = true
+remappings_location = "config"
+
+[dependencies]
+forge-std = "1"
+
+# Other profiles
+
+[profile.ci]
+verbosity = 3
+fuzz = { runs = 256 }
