@@ -3,17 +3,45 @@
   "version": "0.1.0",
   "description": "A collection of useful open-source Solidity libraries",
   "repository": "git@github.com:SmarDex-Ecosystem/solidity-libs.git",
-  "author": "RA2 Tech",
+  "author": {
+    "name": "RA2 Tech SA",
+    "url": "https://ra2.tech"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf dist && rm -rf node_modules && rm -rf .coverage && rm -rf out && rm -rf dependencies && forge clean && npm run installDeps",
+    "cov": "forge build --skip .sol && forge coverage --no-match-test \"(FFI|Fork|Fuzz|invariant)\" --no-match-contract Fork -vvv --offline",
+    "cov:html": "npm run coverage && genhtml -o .coverage lcov.info && open .coverage/index.html",
+    "coverage": "npm run cov -- --report lcov",
+    "exportAbi": "forge build --skip \"test/**/*\" --skip script && tsx ./script/utils/exportAbi.ts -g '{interfaces/**/*.sol,**/*[mM]ock*.sol}' && tsup ./dist/abi/index.ts --format cjs --format esm --dts --sourcemap",
     "format": "forge fmt",
+    "format:js": "npx @biomejs/biome format . --write",
     "installDeps": "npm i && forge soldeer install",
-    "lint:test": "solhint -c test/.solhint.json 'test/**/*.sol'",
-    "lint": "solhint 'src/**/*.sol'",
+    "prepare": "husky",
+    "quicktest": "forge test -vvv --no-match-test \"(FFI|Fork|Fuzz|invariant)\" --no-match-contract Fork --offline",
+    "quicktest:gas": "npm run quicktest -- --gas-report",
+    "slither": "slither .",
+    "snapshot": "FOUNDRY_PROFILE=ci forge clean && FOUNDRY_PROFILE=ci forge snapshot --no-match-test \"(FFI|Fork|Fuzz)\" --no-match-contract Fork --offline",
+    "snapshot:check": "FOUNDRY_PROFILE=ci forge build && FOUNDRY_PROFILE=ci forge snapshot --no-match-test \"(FFI|Fork|Fuzz)\" --no-match-contract Fork --check --offline",
     "test": "forge test -vvv"
   },
+  "files": [
+    "dist",
+    "broadcast",
+    "docs"
+  ],
   "devDependencies": {
-    "solhint": "^5.0.2"
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^20.0.0",
+    "commander": "^12.1.0",
+    "glob": "^11.0.0",
+    "husky": "^9.1.7",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "viem": "^2.21.54"
   }
 }
