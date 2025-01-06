@@ -22,7 +22,7 @@ If you want to contribute to this repository, create an issue explaining your pr
 
 Then, wait for maintainers to state on what to do with your issue.
 
-If you contribute, any change of code must be thoroughly tested and requires one or more code reviews depending on the complexity.
+If you contribute, any change of code must be thoroughly tested and requires one or more code reviews depending on its complexity.
 
 ## Contracts
 
