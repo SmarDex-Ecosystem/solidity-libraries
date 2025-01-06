@@ -27,7 +27,7 @@ If you contribute, any change of code must be thoroughly tested and requires one
 ## Contracts
 
 ```ml
-maths
+src
 └─ HugeUint — "Uint512 implementation with basic math operations"
 ```
 
