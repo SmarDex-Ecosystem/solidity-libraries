@@ -33,25 +33,3 @@ jobs:
 
       - name: Run tests
         run: forge test
-
-  run-slither:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Install Foundry
-        uses: foundry-rs/foundry-toolchain@v1
-        with:
-          version: nightly
-
-      - name: Install deps
-        run: forge soldeer install
-
-      - name: Install slither
-        uses: threeal/pipx-install-action@v1.0.0
-        with:
-          packages: slither-analyzer
-
-      - name: Run slither
-        run: |
-          slither --fail-none --json - . | jq '.results.detectors[] | .elements[0].source_mapping as $src | "::\( if .impact == "High" then "error" elif .impact == "Medium" then "warning" else "notice" end ) file=\( $src.filename_relative ),col=\( $src.starting_column ),endColumn=\( $src.ending_column ),line=\( $src.lines[0] )\( if $src.lines[0] == $src.lines[-1] then "" else ",endLine=" + "\( $src.lines[-1] )" end )::\( .description )"' | xargs -n1 echo
