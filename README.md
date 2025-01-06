@@ -7,13 +7,13 @@ Open-source Solidity libraries used in the SmarDex ecosystem.
 To install with [**Foundry**](https://github.com/foundry-rs/foundry):
 
 ```sh
-forge soldeer install @smardex-solidity-libs~1.0.0
+forge soldeer install @smardex-solidity-libraries~1.0.0
 ```
 
 To install with [**Hardhat**](https://github.com/nomiclabs/hardhat):
 
 ```sh
-npm install @smardex/solidity-libs
+npm install @smardex/solidity-libraries
 ```
 
 ## Contributing
@@ -28,7 +28,7 @@ If you contribute, any change of code must be thoroughly tested and requires one
 
 ```ml
 maths
-└─ HugeUint — "Uint512 implementation with operand functions"
+└─ HugeUint — "Uint512 implementation with basic math operations"
 ```
 
 ## Safety
