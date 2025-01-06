@@ -43,17 +43,12 @@ jobs:
         run: npm ci && forge soldeer install
         if: ${{ steps.release.outputs.release_created }}
 
-
       - name: Generate docs
         run: forge doc
         if: ${{ steps.release.outputs.release_created }}
 
-      - name: Configure AWS credentials
-        uses: backend-ra2-tech/composite-workflows/aws-login@main
-        with:
-          aws-role-to-assume: github-workflow-oidc-codeartifacts-deploy
-        if: ${{ steps.release.outputs.release_created }}
-
-      - name: Publish to CodeArtifact
-        run: npm publish
+      - name: Publish to NPM
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         if: ${{ steps.release.outputs.release_created }}
