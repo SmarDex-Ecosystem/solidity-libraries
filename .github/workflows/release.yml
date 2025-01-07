@@ -42,10 +42,6 @@ jobs:
         run: npm ci && forge soldeer install
         if: ${{ steps.release.outputs.release_created }}
 
-      - name: Generate docs
-        run: forge doc
-        if: ${{ steps.release.outputs.release_created }}
-
       - name: Publish to NPM
         run: npm publish --provenance --access public
         env:
