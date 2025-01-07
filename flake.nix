@@ -30,10 +30,12 @@
           ];
           packages = with pkgs; [
             foundry-bin
+            lcov
             slither-analyzer
           ];
 
           shellHook = ''
+            npm i
             forge soldeer install
           '';
 

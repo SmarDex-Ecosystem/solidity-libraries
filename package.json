@@ -1,0 +1,45 @@
+{
+  "name": "@smardex/solidity-libraries",
+  "version": "0.1.0",
+  "description": "A collection of useful open-source Solidity libraries",
+  "repository": "git+https@github.com:SmarDex-Ecosystem/solidity-libraries.git",
+  "keywords": [
+    "Solidity",
+    "Blockchain",
+    "EVM",
+    "Ethereum",
+    "Foundry",
+    "HardHat",
+    "DeFi"
+  ],
+  "author": {
+    "name": "RA2 Tech SA",
+    "url": "https://ra2.tech"
+  },
+  "homepage": "https://github.com/SmarDex-Ecosystem/solidity-libraries#readme",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist && rm -rf node_modules && rm -rf .coverage && rm -rf out && rm -rf dependencies && forge clean && npm run installDeps",
+    "cov": "forge build --skip .sol && forge coverage --no-match-test \"(FFI|Fork|Fuzz|invariant)\" --no-match-contract Fork -vvv --offline",
+    "cov:html": "npm run coverage && genhtml -o .coverage lcov.info && open .coverage/index.html",
+    "coverage": "npm run cov -- --report lcov",
+    "format": "forge fmt",
+    "installDeps": "npm i && forge soldeer install",
+    "prepare": "husky",
+    "quicktest": "forge test -vvv --no-match-test \"(FFI|Fork|Fuzz|invariant)\" --no-match-contract Fork --offline",
+    "quicktest:gas": "npm run quicktest -- --gas-report",
+    "slither": "slither .",
+    "test": "forge test -vvv"
+  },
+  "directories": {
+    "src": "src"
+  },
+  "files": [
+    "src",
+    "foundry.toml",
+    "soldeer.lock"
+  ],
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}
