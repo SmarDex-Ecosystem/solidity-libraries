@@ -16,9 +16,7 @@
     "name": "RA2 Tech SA",
     "url": "https://ra2.tech"
   },
-  "engines": {
-    "node": ">=20.0.0"
-  },
+  "homepage": "https://github.com/SmarDex-Ecosystem/solidity-libs#readme",
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf dist && rm -rf node_modules && rm -rf .coverage && rm -rf out && rm -rf dependencies && forge clean && npm run installDeps",
@@ -31,14 +29,15 @@
     "quicktest": "forge test -vvv --no-match-test \"(FFI|Fork|Fuzz|invariant)\" --no-match-contract Fork --offline",
     "quicktest:gas": "npm run quicktest -- --gas-report",
     "slither": "slither .",
-    "snapshot": "FOUNDRY_PROFILE=ci forge clean && FOUNDRY_PROFILE=ci forge snapshot --no-match-test \"(FFI|Fork|Fuzz)\" --no-match-contract Fork --offline",
-    "snapshot:check": "FOUNDRY_PROFILE=ci forge build && FOUNDRY_PROFILE=ci forge snapshot --no-match-test \"(FFI|Fork|Fuzz)\" --no-match-contract Fork --check --offline",
     "test": "forge test -vvv"
   },
+  "directories": {
+    "src": "src"
+  },
   "files": [
-    "dist",
-    "broadcast",
-    "docs"
+    "src",
+    "foundry.toml",
+    "soldeer.lock"
   ],
   "devDependencies": {
     "husky": "^9.1.7"
