@@ -5,7 +5,6 @@ on:
 name: Release Workflow
 
 permissions:
-  id-token: write # Required for requesting AWS JWT
   contents: write # Required for actions/checkout and push commit
   pull-requests: write # Required for creating pull-requests
 
