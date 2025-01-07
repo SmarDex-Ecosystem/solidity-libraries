@@ -3,6 +3,15 @@
   "version": "0.1.0",
   "description": "A collection of useful open-source Solidity libraries",
   "repository": "git@github.com:SmarDex-Ecosystem/solidity-libs.git",
+  "keywords": [
+    "Solidity",
+    "Blockchain",
+    "EVM",
+    "Ethereum",
+    "Foundry",
+    "HardHat",
+    "DeFi"
+  ],
   "author": {
     "name": "RA2 Tech SA",
     "url": "https://ra2.tech"
