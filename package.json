@@ -2,7 +2,7 @@
   "name": "@smardex/solidity-libraries",
   "version": "0.1.0",
   "description": "A collection of useful open-source Solidity libraries",
-  "repository": "git@github.com:SmarDex-Ecosystem/solidity-libraries.git",
+  "repository": "git+https@github.com:SmarDex-Ecosystem/solidity-libraries.git",
   "keywords": [
     "Solidity",
     "Blockchain",
