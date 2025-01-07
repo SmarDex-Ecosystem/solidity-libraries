@@ -1,0 +1,27 @@
+{
+  "name": "@smardex/solidity-libraries",
+  "version": "0.1.0",
+  "description": "Open-source Solidity libraries used in the SmarDex ecosystem.",
+  "directories": {
+    "src": "src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmarDex-Ecosystem/solidity-libs.git"
+  },
+  "keywords": [
+    "Solidity",
+    "Blockchain",
+    "EVM",
+    "Ethereum",
+    "Foundry",
+    "HardHat",
+    "DeFi"
+  ],
+  "author": "RA2TECH <info@ra2.tech> (https://smardex.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SmarDex-Ecosystem/solidity-libs/issues"
+  },
+  "homepage": "https://github.com/SmarDex-Ecosystem/solidity-libs#readme"
+}
