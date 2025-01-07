@@ -30,6 +30,7 @@
           ];
           packages = with pkgs; [
             foundry-bin
+            lcov
             slither-analyzer
           ];
 
