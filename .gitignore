@@ -9,6 +9,7 @@ target/
 cache/
 
 # Dependencies
+node_modules/
 dependencies/
 
 # direnv
