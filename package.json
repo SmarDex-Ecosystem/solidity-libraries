@@ -2,7 +2,7 @@
   "name": "@smardex/solidity-libraries",
   "version": "0.1.0",
   "description": "A collection of useful open-source Solidity libraries",
-  "repository": "git@github.com:SmarDex-Ecosystem/solidity-libs.git",
+  "repository": "git@github.com:SmarDex-Ecosystem/solidity-libraries.git",
   "keywords": [
     "Solidity",
     "Blockchain",
@@ -16,7 +16,7 @@
     "name": "RA2 Tech SA",
     "url": "https://ra2.tech"
   },
-  "homepage": "https://github.com/SmarDex-Ecosystem/solidity-libs#readme",
+  "homepage": "https://github.com/SmarDex-Ecosystem/solidity-libraries#readme",
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf dist && rm -rf node_modules && rm -rf .coverage && rm -rf out && rm -rf dependencies && forge clean && npm run installDeps",
