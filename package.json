@@ -9,6 +9,11 @@
     "type": "git",
     "url": "git+https://github.com/SmarDex-Ecosystem/solidity-libs.git"
   },
+  "scripts": {
+    "build": "cargo build --release",
+    "quicktest": "npm run build && forge test --no-match-contract Fuzzing",
+    "test": "npm run build && forge test"
+  },
   "keywords": [
     "Solidity",
     "Blockchain",
