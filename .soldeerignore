@@ -1,0 +1,7 @@
+*
+!src/
+!src/*
+!src/*/
+!src/*/*
+!foundry.toml
+!soldeer.lock

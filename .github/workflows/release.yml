@@ -40,15 +40,25 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
 
       - name: Install dependencies
-        run: npm ci && forge soldeer install
         if: ${{ steps.release.outputs.release_created }}
+        run: npm ci && forge soldeer install
 
       - name: Publish to NPM
+        if: ${{ steps.release.outputs.release_created }}
         run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        if: ${{ steps.release.outputs.release_created }}
 
       - name: Publish to JSR.io
-        run: npx jsr publish
         if: ${{ steps.release.outputs.release_created }}
+        run: npx jsr publish
+
+      - name: Publish to soldeer.xyz
+        if: ${{ steps.release.outputs.release_created }}
+        env:
+          SOLDEER_EMAIL: ${{ secrets.SOLDEER_EMAIL }}
+          SOLDEER_PASSWORD: ${{ secrets.SOLDEER_PASSWORD }}
+        run: |
+          forge soldeer login --email "$SOLDEER_EMAIL" --password "$SOLDEER_PASSWORD"
+          VERSION=$(npm pkg get version --workspaces=false | tr -d \")
+          forge soldeer push @smardex-solidity-libraries~$VERSION
