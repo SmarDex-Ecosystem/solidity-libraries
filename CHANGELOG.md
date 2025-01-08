@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/SmarDex-Ecosystem/solidity-libraries/compare/v1.0.0...v1.0.1) (2025-01-08)
+
+
+### Bug Fixes
+
+* npm publish ([#11](https://github.com/SmarDex-Ecosystem/solidity-libraries/issues/11)) ([304f2aa](https://github.com/SmarDex-Ecosystem/solidity-libraries/commit/304f2aa4895f5c31495e447702fa3386bdf14949))
+
 ## [1.0.0](https://github.com/SmarDex-Ecosystem/solidity-libraries/compare/v0.1.0...v1.0.0) (2025-01-08)
 
 
