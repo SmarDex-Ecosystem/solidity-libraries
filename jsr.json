@@ -1,8 +1,13 @@
 {
 	"name": "@smardex/solidity-libraries",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"exports": "./index.ts",
 	"publish": {
-		"include": ["index.ts", "src/**/*", "foundry.toml", "soldeer.lock"]
+		"include": [
+			"index.ts",
+			"src/**/*",
+			"foundry.toml",
+			"soldeer.lock"
+		]
 	}
 }
