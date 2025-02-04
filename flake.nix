@@ -32,7 +32,6 @@
             nodejs-slim_20
             foundry-bin
             lcov
-            slither-analyzer
           ];
 
           shellHook = ''
