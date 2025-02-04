@@ -31,7 +31,6 @@
     "prepare": "husky",
     "quicktest": "forge test -vvv --no-match-test \"(FFI|Fork|Fuzz|invariant)\" --no-match-contract Fork --offline",
     "quicktest:gas": "npm run quicktest -- --gas-report",
-    "slither": "slither .",
     "test": "forge test -vvv"
   },
   "directories": {
