@@ -3,12 +3,6 @@
   "version": "1.0.1",
   "exports": "./index.ts",
   "publish": {
-    "include": [
-      "index.ts",
-      "src/**/*",
-      "foundry.toml",
-      "soldeer.lock",
-      "docs/**/*"
-    ]
+    "include": ["index.ts", "src/**/*", "foundry.toml", "soldeer.lock", "docs"]
   }
 }
