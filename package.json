@@ -38,9 +38,11 @@
     "src": "src"
   },
   "files": [
-    "src",
+    "docs",
+    "src/**/*",
     "foundry.toml",
-    "soldeer.lock"
+    "soldeer.lock",
+    "README.md"
   ],
   "devDependencies": {
     "husky": "^9.1.7"
