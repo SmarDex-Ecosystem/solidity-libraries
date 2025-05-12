@@ -4,6 +4,7 @@ libs = ["dependencies"]
 ffi = true
 fuzz = { runs = 1_0000 }
 remappings = ["forge-std-1/=dependencies/forge-std-1.9.4/src/"]
+allow_internal_expect_revert = true
 
 [profile.default.fmt]
 line_length = 120
